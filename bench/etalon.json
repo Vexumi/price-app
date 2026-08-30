@@ -1,0 +1,16 @@
+{
+ "Изображение PNG.png":     {"price": 54.99, "disc": false, "note": "Ярче"},
+ "Изображение PNG 2.png":   {"price": 54.99, "disc": false, "note": "Ярче"},
+ "Изображение PNG 3.png":   {"price": 49.99, "disc": false, "note": "Ярче"},
+ "Изображение PNG 4.png":   {"price": 34.99, "disc": false, "note": "Ярче"},
+ "Изображение PNG 5.png":   {"price": 39.99, "disc": false, "note": "Ярче, сосед в кадре"},
+ "Изображение PNG 6.png":   {"price": 99.98, "disc": true,  "note": "Ярче, было 119.98"},
+ "Изображение PNG 7.png":   {"price": 114.98,"disc": false, "note": "Ярче, 3 ценника в кадре"},
+ "Изображение PNG 8.png":   {"price": 79.99, "disc": true,  "note": "Ярче, было 119.99"},
+ "Изображение PNG 9.png":   {"price": 69.98, "disc": false, "note": "Ярче"},
+ "Изображение PNG 59.png":  {"price": null,  "disc": false, "note": "НЕ ЦЕННИК (такси)"},
+ "Изображение PNG 67.png":  {"price": 24.99, "disc": false, "note": "Монетка, копейки снизу"},
+ "Изображение PNG 116.png": {"price": 21.99, "disc": false, "note": "Магнит, жёлтый"},
+ "Изображение PNG 120.png": {"price": 55.99, "disc": true,  "note": "по карте, без карты 67.99"},
+ "Изображение PNG 140.png": {"price": 29.99, "disc": false, "note": "за 1 шт (крупно 23.99 = от 3 шт)"}
+}

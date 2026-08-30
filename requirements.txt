@@ -1,0 +1,6 @@
+openpyxl
+rapidocr
+onnxruntime
+rapidfuzz
+pillow
+PySide6

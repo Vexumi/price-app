@@ -1,0 +1,47 @@
+name: build-windows
+
+# Сборка .exe возможна только на Windows (PyInstaller не кросс-компилирует
+# с macOS) - поэтому вся сборка идёт здесь, в облаке, а не у Глеба на маке.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "price_app/**"
+      - "main.py"
+      - "price_app.spec"
+      - "requirements.txt"
+      - "requirements-build.txt"
+      - "installer/**"
+      - ".github/workflows/build-windows.yml"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+          architecture: "x64"
+
+      - name: Установить зависимости
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-build.txt
+
+      - name: Собрать exe (PyInstaller)
+        run: pyinstaller price_app.spec --clean --noconfirm
+
+      - name: Установить Inno Setup
+        run: choco install innosetup --no-progress -y
+
+      - name: Собрать setup.exe (Inno Setup)
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer\setup.iss
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: setup
+          path: installer_output\setup.exe

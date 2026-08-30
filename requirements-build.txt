@@ -1,0 +1,4 @@
+# Нужны только для сборки .exe (PyInstaller), не для запуска из исходников -
+# см. requirements.txt для рантайм-зависимостей.
+pyinstaller
+pyinstaller-hooks-contrib
